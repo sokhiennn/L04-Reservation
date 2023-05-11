@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         String mobile = mobileEditText.getText().toString();
         int groupSize = Integer.parseInt(groupSizeEditText.getText().toString());
         int day = datePicker.getDayOfMonth();
-        int month = datePicker.getMonth() + 1; // Month is zero-based, so add 1
+        int month = datePicker.getMonth() + 1;
         int year = datePicker.getYear();
         int hour = timePicker.getCurrentHour();
         int minute = timePicker.getCurrentMinute();
@@ -87,7 +87,8 @@ public class MainActivity extends AppCompatActivity {
         mobileEditText.setText("");
         groupSizeEditText.setText("");
         Calendar calendar = Calendar.getInstance();
-        datePicker.updateDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+        datePicker.updateDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH));
         timePicker.setCurrentHour(calendar.get(Calendar.HOUR_OF_DAY));
         timePicker.setCurrentMinute(calendar.get(Calendar.MINUTE));
         smokingRadioGroup.check(R.id.smokingNo);
